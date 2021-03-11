@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>VIKS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+  <hr>
+  <audio src= "12.mp3" controls> </audio>
+  <hr>
+  
+<div class="header">
+  <h1>VIKS</h1>
+  <p> <b> МИ ЗНАЄМО, ЯК ЕКОНОМИТИ І
+ЗАЛИШАТИСЯ МОДНИМ!</b> </p>
+<video src="1.mp4" width="350" controls> </video>
+
+</div>
+<script >
+  var counter = 0;
+  function showNextPhoto() {
+    counter ++;
+    document.pic.src='images/photo'+ counter +'.jpg';
+    if (counter > 3) {
+      counter = 0;
+    }
+  }
+</script>
+
+  <div> 
+    <img style="width: 200px; height: 200px;" name="pic" src="images/photo0.jpg">
+  </div>
+  <button onclick="showNextPhoto()">Наступне</button>
+
+<div class="navbar">
+  <a href="#" class="active">ГОЛОВНА</a>
+  <a href="#">ЧОЛОВІЧИЙ ОДЯГ</a>
+  <a href="#">ЖІНОЧИЙ ОДЯГ</a>
+  <a href="#">ДИТЯЧИЙ ОДЯГ</a>
+  <a href="#" class="right">ВИЙТИ</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>Про мене</h2>
+    <h5>Фото:</h5>
+    <img src= "шшш.jpg" width= "40%" height="30%">
+    <p> Всім привіт, Я Вікторія і я є власницею VIKS, це мій перший власний бізнес, я довго вагалася створювати його чи ні, але зрозуміла, що Україні потрібен новий хороший бренд. Тоді якщо ви вже на цьому сайті, то я вам бажаю хороших покупок в нас найкращі ціни!</p>
+    <h3> <p><a href="https://www.instagram.com/vika.gk_/">Я в соціальних мережах!</a></p></h3>
+    <div class=img scr = "000.png" style=height:40px;> </div><br>
+    <table>
+  <colgroup>
+    <col span="2" style="background:Khaki"><!-- С помощью этой конструкции задаем цвет фона для первых двух столбцов таблицы-->
+    <col style="background-color:LightCyan"><!-- Задаем цвет фона для следующего (одного) столбца таблицы-->
+  </colgroup> 
+  <tr>
+    <th>№ п/п</th>
+    <th>Назва</th>
+    <th>Ціна, грн.</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Чоловічий одяг</td>
+    <td>від 200,00</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Жіночий одяг</td>
+    <td>від 300,00</td>
+  </tr>
+  <td>3</td>
+    <td>Дитячий одяг</td>
+    <td>від 150,00</td>
+    </tr>
+    <td>4</td>
+    <td>Сукні</td>
+    <td>від 500,00</td>
+    </tr>
+    <td>5</td>
+    <td>Останні розміра</td>
+    <td>від 150,00</td>
+    </tr>
+    <td>6</td>
+    <td>Літній одяг</td>
+    <td>від 200,00</td>
+    </tr>
+    <td>7</td>
+    <td>Куртки</td>
+    <td>від 1000,00</td>
+    </tr>
+    <td>8</td>
+    <td>Аксесуари</td>
+    <td>від 100,00</td>
+</table>
+         
+  </div>
+  <div class="main">
+    <h2>ПРО НАС</h2>
+    <h5> Компанія VIKS основана в 2019 році.</h5>
+        <img src="123.png"> 
+    <p></b>ЧОМУ ВАРТО ЗАМОВИТИ У НАС<b> </p>
+      <p>Можливо, один з головних аргументів у нашій користі - 60% покупців повертаються, щоб зробити повторне замовлення. Клієнти називають і інші наші переваги: ​​
+
+величезний асортимент: тільки в розділі "Сукні" представлено понад 5000 товарів на будь-який смак, колір та бюджет;
+з 2020 року ми експортуємо одяг VIKS - високу якість нашої роботи оцінили за межами України;
+розміри повністю відповідають розмірній сітці;
+простота повернення та обміну;
+приємні ціни та знижки для оптових покупців: чим більше опт, тим більше знижка;
+можливість індивідуального пошиву по Вашим міркам.</p>
+    <p> Наша спеціалізація - продаж доступного жіночого, чоловічого та дитячого одягу для будь-яких випадків: на кожен день, нарядна, для спорту і т. д.
+
+     Ми ростемо і розвиваємося щодня, і це все завдяки Вам. Наша молода компанія спеціалістів живе роботою, отримує від неї задоволення і вдосконалюється щотижня. Тисячі позитивних відгуків клієнтів мотивують нас до виконання роботи ще краще. </p>
+    <br> 
+    <h2> Туроператор №1 в Україні 
+    <img src="viks.png"  width= "40%" height="40%" > </h2>
+    <h5> </h5>
+    
+    <p>Щоб Ваш онлайн-шопінг був насправді вигідним, ми щодня робимо знижки на моделі в останньому розмірі, надаємо клієнтам бонуси на повторне замовлення та знижку 100 гривень за реєстрацію на сайті.</p>
+    <p> Ваш зручний шопінг - це ми!</p>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Хороших вам покупок!</h2>
+</div>
+
+</body>
+</html>
